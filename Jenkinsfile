@@ -1,7 +1,8 @@
 //def LINK_DOCKER_IMAGE = "maven:3.3.3"
-def LINK_DOCKER_IMAGE = "${env.GIT_BRANCH}"
+//def LINK_DOCKER_IMAGE = "${env.GIT_BRANCH}"
 
 pipeline {
+   def LINK_DOCKER_IMAGE = "${env.GIT_BRANCH}"
     environment {
         SSH_KEY = credentials('ssh-key')
 	OOO = "${env.GIT_BRANCH}"
@@ -11,7 +12,7 @@ pipeline {
 # schedule every 4hours only on weekdays
 */2 * * * 1-5 % ABC=XYZ''' : '')
   }
-    agent { docker { image "${OOO}" } }
+    agent { docker { image "${LINK_DOCKER_IMAGE}" } }
     stages {
         stage('build') {
             steps {
