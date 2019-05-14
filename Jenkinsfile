@@ -1,9 +1,8 @@
 //def LINK_DOCKER_IMAGE = "maven:3.3.3"
-def LINK_DOCKER_IMAGE = "${env.GIT_BRANCH}"
+def LINK_DOCKER_IMAGE = env.GIT_BRANCH
 
 pipeline {
     environment {
-        LINK_DOCKER_IMAGE = "${env.GIT_BRANCH}"
         SSH_KEY = credentials('ssh-key')
     }
   triggers {
