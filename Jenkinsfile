@@ -1,11 +1,10 @@
 //def LINK_DOCKER_IMAGE = "maven:3.3.3"
-//def LINK_DOCKER_IMAGE = "${env.GIT_BRANCH}"
+def LINK_DOCKER_IMAGE = "${env.GIT_BRANCH}"
 
 pipeline {
     environment {
-       def LINK_DOCKER_IMAGE = "${env.GIT_BRANCH}"
+        LINK_DOCKER_IMAGE = "${env.GIT_BRANCH}"
         SSH_KEY = credentials('ssh-key')
-	OOO = "${env.GIT_BRANCH}"
     }
   triggers {
     parameterizedCron(env.BRANCH_NAME == 'plugin-test' ? '''
