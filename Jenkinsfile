@@ -1,7 +1,7 @@
 //def LINK_DOCKER_IMAGE = "maven:3.3.3"
 def LINK_DOCKER_IMAGE = env.GIT_BRANCH
 
-println ("${env.GIT_BRANCH}")
+println ("branch --> ${env.GIT_BRANCH} $GIT_BRANCH - ${GIT_BRANCH}" )
 
 
 pipeline {
