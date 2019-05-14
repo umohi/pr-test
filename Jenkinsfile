@@ -2,7 +2,7 @@
 def LINK_DOCKER_IMAGE = env.GIT_BRANCH
 
 println ("branch1 --> ${env.GIT_BRANCH}" )
-//println ("branch2 --> $GIT_BRANCH " )
+println ("branch2 --> $HOME " )
 println ("branch3 --> ${GIT_BRANCH}" )
 
 
