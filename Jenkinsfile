@@ -6,7 +6,7 @@ pipeline {
 # schedule every 4hours only on weekdays
 */2 * * * 1-5 % ABC=XYZ''' : '')
   }
-    agent { docker { image "${LINK_DOCKER_IMAGE}" } }
+    agent { docker { image "${GIT_BRANCH}" } }
     stages {
         stage('build') {
             steps {
