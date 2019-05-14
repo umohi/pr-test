@@ -2,12 +2,16 @@
 def LINK_DOCKER_IMAGE = "${env.GIT_BRANCH}"
 
 pipeline {
+    environment {
+        SSH_KEY = credentials('ssh-key')
+	OOO = "${env.GIT_BRANCH}"
+    }
   triggers {
     parameterizedCron(env.BRANCH_NAME == 'plugin-test' ? '''
 # schedule every 4hours only on weekdays
 */2 * * * 1-5 % ABC=XYZ''' : '')
   }
-    agent { docker { image "${LINK_DOCKER_IMAGE}" } }
+    agent { docker { image "${OOO}" } }
     stages {
         stage('build') {
             steps {
