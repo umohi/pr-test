@@ -2,8 +2,8 @@
 //def LINK_DOCKER_IMAGE = "${env.GIT_BRANCH}"
 
 pipeline {
-   def LINK_DOCKER_IMAGE = "${env.GIT_BRANCH}"
     environment {
+       def LINK_DOCKER_IMAGE = "${env.GIT_BRANCH}"
         SSH_KEY = credentials('ssh-key')
 	OOO = "${env.GIT_BRANCH}"
     }
