@@ -5,6 +5,6 @@ node {
   stage('build') {
     sayHello
     sayHello "oooooooooooooooo"
-    echo bfEmailFromGHId()
+    echo bfEmailFromGHId(this)
   }
 }
