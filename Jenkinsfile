@@ -1,8 +1,9 @@
 @Library('sayHello') _
 
-stage('build') {
+node {
+  stage('build') {
     sayHello
     sayHello "oooooooooooooooo"
     sh 'env'
+  }
 }
-
