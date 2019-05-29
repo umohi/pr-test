@@ -1,9 +1,10 @@
-@Library('sayHello') _
+@Library('sayHello')
+@Library('bfEmailFromGHId') _
 
 node {
   stage('build') {
     sayHello
     sayHello "oooooooooooooooo"
-    sh 'env'
+    echo bfEmailFromGHId()
   }
 }
