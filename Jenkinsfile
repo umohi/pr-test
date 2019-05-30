@@ -1,5 +1,5 @@
 @Library('sayHello')
-@Library('bfEmailFromGHId@dev-209-map-gh-to-bf-ids') _
+@Library('bfEmailFromGHId') _
 
 node {
   stage('build') {
