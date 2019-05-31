@@ -1,4 +1,4 @@
-@Library('sayHello')
+//@Library('sayHello')
 @Library('bfEmailFromGHId') _
 
 node {
