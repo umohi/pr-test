@@ -3,8 +3,8 @@
 
 node {
   stage('build') {
-    sayHello
-    sayHello "oooooooooooooooo"
+    // sayHello
+    // sayHello "oooooooooooooooo"
     echo bfEmailFromGHId.doIt(this)
   }
 }
