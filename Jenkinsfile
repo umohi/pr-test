@@ -1,5 +1,5 @@
 //@Library('sayHello')
-@Library('bfEmailFromGHId') 
+@Library('emailUtil') 
 import com.barefootnetworks.jenkins.sharedlibrary.BFEmailFromGH
 
 def emailUtil = new bfEmailFromGHId(this)
