@@ -2,7 +2,7 @@
 @Library('emailUtil') 
 import com.barefootnetworks.jenkins.sharedlibrary.BFEmailFromGH
 
-def emailUtil = new bfEmailFromGHId(this)
+def emailUtil = new BFEmailFromGH(this)
 
 node {
   stage('build') {
