@@ -1,6 +1,6 @@
 //@Library('sayHello')
 @Library('bfEmailFromGHId') 
-import com.barefootnetworks.jenkins.sharedlibrary.bfEmailFromGHId
+import com.barefootnetworks.jenkins.sharedlibrary.BFEmailFromGH
 
 def emailUtil = new bfEmailFromGHId(this)
 
