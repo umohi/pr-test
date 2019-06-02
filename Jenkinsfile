@@ -1,11 +1,13 @@
 //@Library('sayHello')
-@Library('bfEmailFromGHId') _
+@Library('bfEmailFromGHId') 
+import com.barefootnetworks.jenkins.sharedlibrary
+def emailUtil = new bfEmailFromGHId(this)
 
 node {
   stage('build') {
   	sh 'env'
     // sayHello
     // sayHello "oooooooooooooooo"
-    echo bfEmailFromGHId.doIt(this)
+    emailUtil.emailAuthor()
   }
 }
